@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Zl8DpaEHg8XTGrAcrynEDmTGWFRX3Ay4zxc6JuCfJZ3sjgsohn2NtklEmDm5zbQWtbdkbXK8jTsOUEnH4jbZ1Q==",
+  "dgSpecHash": "VgdnKvJw/QWUpUr1TEypN9Hv7BiTSGVvoXUO262d2bAFNZ8vt/4tXwwF+1VMf5k46X4zB0ZS4g1SD4hB9TpgiA==",
   "success": true,
   "projectFilePath": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\website_CLB_HTSV.csproj",
   "expectedPackageFiles": [
@@ -247,6 +247,7 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\sendgrid\\9.29.2\\sendgrid.9.29.2.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\sixlabors.imagesharp\\3.1.4\\sixlabors.imagesharp.3.1.4.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\skiasharp\\2.88.8\\skiasharp.2.88.8.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\skiasharp.nativeassets.macos\\2.88.8\\skiasharp.nativeassets.macos.2.88.8.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\skiasharp.nativeassets.win32\\2.88.8\\skiasharp.nativeassets.win32.2.88.8.nupkg.sha512",
