@@ -59,6 +59,7 @@ namespace website_CLB_HTSV.Controllers
                 using (var image = SKImage.FromBitmap(bitmap))
                 using (var data = image.Encode(SKEncodedImageFormat.Png, 100))
                 {
+                    // Biến fileName đã được khai báo ở trên và có thể dùng ở đây
                     var filePath = Path.Combine(_webHostEnvironment.WebRootPath, "qrcode", fileName); // Save into "qrcode" directory in wwwroot
 
                     // Save the image
