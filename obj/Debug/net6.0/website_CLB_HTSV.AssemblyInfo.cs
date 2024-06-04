@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("website_CLB_HTSV")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aed54d9cfa3d61eabdd69add25929a17dc9d361d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5940808648303b4916a2d616fd9d725f86faa01a")]
 [assembly: System.Reflection.AssemblyProductAttribute("website_CLB_HTSV")]
 [assembly: System.Reflection.AssemblyTitleAttribute("website_CLB_HTSV")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
