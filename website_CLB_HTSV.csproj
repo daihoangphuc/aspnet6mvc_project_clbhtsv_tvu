@@ -74,7 +74,6 @@
   <ItemGroup>
     <Folder Include="wwwroot\qrcode\" />
     <Folder Include="wwwroot\newsimages\" />
-    <Folder Include="wwwroot\userimages\" />
   </ItemGroup>
 
 </Project>
