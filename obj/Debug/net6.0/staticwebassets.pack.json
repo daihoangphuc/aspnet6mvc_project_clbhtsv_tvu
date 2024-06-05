@@ -2645,12 +2645,20 @@
       "PackagePath": "staticwebassets\\Login_Register\\src\\html\\ui-typography.html"
     },
     {
+      "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\css\\argon-dashboard.css",
+      "PackagePath": "staticwebassets\\assets\\css\\argon-dashboard.css"
+    },
+    {
       "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
       "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\img\\Banner.png",
       "PackagePath": "staticwebassets\\assets\\img\\Banner.png"
+    },
+    {
+      "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\img\\activities.png",
+      "PackagePath": "staticwebassets\\assets\\img\\activities.png"
     },
     {
       "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\img\\apple-touch-icon.png",
@@ -2817,8 +2825,20 @@
       "PackagePath": "staticwebassets\\assets\\img\\thethanhvienclb.png"
     },
     {
+      "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\js\\argon-dashboard.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\argon-dashboard.min.js"
+    },
+    {
       "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\js\\main.js",
       "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\js\\plugins\\Chart.extension.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\Chart.extension.js"
+    },
+    {
+      "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\js\\plugins\\chartjs.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins\\chartjs.min.js"
     },
     {
       "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\scss\\Readme.txt",
@@ -3557,16 +3577,16 @@
       "PackagePath": "staticwebassets\\userimages\\71d5b573-f7c2-40f8-94af-9c0d83bd37a3.jpg"
     },
     {
-      "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\userimages\\77ee92f6-8cb1-4e5e-90d4-84d897d3a76f.png",
-      "PackagePath": "staticwebassets\\userimages\\77ee92f6-8cb1-4e5e-90d4-84d897d3a76f.png"
-    },
-    {
       "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\userimages\\86fd1518-7c00-49e7-b69f-d30ce821abc7.png",
       "PackagePath": "staticwebassets\\userimages\\86fd1518-7c00-49e7-b69f-d30ce821abc7.png"
     },
     {
       "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\userimages\\8b784543-0188-47c9-972f-cf39c45b1a63.png",
       "PackagePath": "staticwebassets\\userimages\\8b784543-0188-47c9-972f-cf39c45b1a63.png"
+    },
+    {
+      "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\userimages\\980fc182-22f9-44f0-826d-9085ce37114f.png",
+      "PackagePath": "staticwebassets\\userimages\\980fc182-22f9-44f0-826d-9085ce37114f.png"
     },
     {
       "Id": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\userimages\\a66dcb6d-b3b7-4481-a0d9-ba5413977902.jpg",
