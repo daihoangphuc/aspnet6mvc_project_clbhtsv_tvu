@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0JxozsMo8mWgFbfukmAPJsu4T1qDPME1bPmXwUHETjI=",
+  "Hash": "maoZN3xg91LpawaiynqJywMcNtVlKEuwbuLqnoCvJ4I=",
   "Source": "website_CLB_HTSV",
   "BasePath": "_content/website_CLB_HTSV",
   "Mode": "Default",
@@ -1288,6 +1288,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\banner1.png"
+    },
+    {
+      "Identity": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\img\\banner-club.png",
+      "SourceId": "website_CLB_HTSV",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\",
+      "BasePath": "_content/website_CLB_HTSV",
+      "RelativePath": "assets/img/banner-club.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\banner-club.png"
     },
     {
       "Identity": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\img\\clients\\client-1.png",

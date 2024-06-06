@@ -12,7 +12,7 @@
                     <div class="row">
                         <div class="col-md-6 d-md-flex align-items-md-stretch">
                             <div class="count-box">
-                                <i class="bi bi-person"></i>
+                                <i class="bi bi-people"></i>
                                 <span data-purecounter-start="0" data-purecounter-end="@ViewBag.TotalSinhViens" data-purecounter-duration="1" class="purecounter"></span>
                                 <p>Số lượng thành viên <strong>đông đảo, vui vẻ, hòa đồng, nhiệt huyết.</strong></p>
                             </div>
@@ -67,34 +67,49 @@
                                         {
                                             <img src="/assets/img/icon-logo.png" class="img-fluid w-full h-48 object-cover" alt="Avatar">
                                         }
-                                    </div>
-                                    <br />
-                                    <div class="member-info">
-                                        <a href="/SinhViens/Details/?id=@sinhVien.MaSV">
-                                            <h4>@sinhVien.HoTen</h4>
-                                        </a>
-                                        @if (sinhVien.ChucVu != null)
-                                        {
-                                            <span>Chức vụ: <strong>@sinhVien.ChucVu.TenChucVu</strong></span>
-                                        }
-                                        else
-                                        {
-                                            <span>Chưa có chức vụ</span>
-                                        }
-                                        <br />
-                                    </div>
+                                        <div class="mt-10">
+                                            <div class="member-info">
+                                                <a href="/SinhViens/Details/?id=@sinhVien.MaSV">
+                                                    <h4>@sinhVien.HoTen</h4>
+                                                </a>
+                                                @if (sinhVien.ChucVu != null)
+                                                {
+                                                    <span>Chức vụ: <strong>@sinhVien.ChucVu.TenChucVu</strong></span>
+                                                }
+                                                else
+                                                {
+                                                    <span>Chưa có chức vụ</span>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class="social-links d-flex justify-content-evenly mt-2 social-links-hidden">
+                                            <a href="tel:@sinhVien.DienThoai" class="twitter"><i class="fas fa-phone"></i></a>
+                                            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                                            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                                            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                                        </div>
+                                    </div>         
                                 </div>
                             </div>
                         </div>
                     }
                 }
             </div>
-            @* <div class="swiper-pagination"></div> *@
+            @* <div class="swiper-pagination"></div>  *@
         </div>
     </div>
 </section><!-- End Testimonials Section -->
 
 <style>
+    .social-links {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .member-img:hover .social-links {
+        opacity: 1;
+    }
+
     /* CSS cho phần section-title */
     .section-title {
         text-align: center;
