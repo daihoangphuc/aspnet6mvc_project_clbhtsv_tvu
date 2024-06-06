@@ -58,7 +58,7 @@
                         <div class="swiper-slide rounded-3xl">
                             <div class="member-container col-lg-3 col-md-6 d-flex align-items-stretch">
                                 <div class="member" data-aos="fade-up" data-aos-delay="100">
-                                    <div class="member-img">
+                                    <div class="member-img mt-5">
                                         @if (sinhVien.HinhAnh != null)
                                         {
                                             <img src="@(Url.Content("~/userimages/" + sinhVien.HinhAnh))" alt="Hình ảnh sinh viên" class="img-fluid w-full h-48 object-cover" />
@@ -82,7 +82,7 @@
                                                 }
                                             </div>
                                         </div>
-                                        <div class="social-links d-flex justify-content-evenly mt-2 social-links-hidden">
+                                        <div class="social-links social-links1 d-flex justify-content-evenly mt-2 social-links-hidden">
                                             <a href="tel:@sinhVien.DienThoai" class="twitter"><i class="fas fa-phone"></i></a>
                                             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                                             <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -101,12 +101,12 @@
 </section><!-- End Testimonials Section -->
 
 <style>
-    .social-links {
+    .social-links1 {
         opacity: 0;
         transition: opacity 0.3s ease;
     }
 
-    .member-img:hover .social-links {
+    .member-img:hover .social-links1 {
         opacity: 1;
     }
 
