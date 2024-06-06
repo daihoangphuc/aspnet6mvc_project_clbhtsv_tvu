@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IPb6cPF+MzTpaOWNTjQxUrzaie2bohL9SMvarEIVVxQ=",
+  "Hash": "0JxozsMo8mWgFbfukmAPJsu4T1qDPME1bPmXwUHETjI=",
   "Source": "website_CLB_HTSV",
   "BasePath": "_content/website_CLB_HTSV",
   "Mode": "Default",
@@ -1271,25 +1271,6 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\apple-touch-icon.png"
     },
     {
-      "Identity": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\img\\Banner.png",
-      "SourceId": "website_CLB_HTSV",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\",
-      "BasePath": "_content/website_CLB_HTSV",
-      "RelativePath": "assets/img/Banner.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\Banner.png"
-    },
-    {
       "Identity": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\img\\banner1.png",
       "SourceId": "website_CLB_HTSV",
       "SourceType": "Discovered",
@@ -1535,6 +1516,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\logo.png"
+    },
+    {
+      "Identity": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\img\\logoclb.png",
+      "SourceId": "website_CLB_HTSV",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\",
+      "BasePath": "_content/website_CLB_HTSV",
+      "RelativePath": "assets/img/logoclb.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\logoclb.png"
     },
     {
       "Identity": "E:\\!Học Kì 6\\ASP.NET\\website_CLB_HTSV\\website_CLB_HTSV\\wwwroot\\assets\\img\\more-services-1.jpg",

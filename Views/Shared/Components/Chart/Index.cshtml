@@ -16,8 +16,8 @@
             <div class="col-lg-7 col-md-6 col-12">
                 <div class="z-index-2 h-100">
                     <div class="card-body">
-                        <div class="chart">
-                            <canvas id="chart-line" class="chart-canvas" height="350"></canvas>
+                        <div class="chart ">
+                            <canvas id="chart-line" class=" chart-canvas" height="350"></canvas>
                         </div>
                         <h6 class="d-flex text-capitalize justify-content-center align-items-center">Tỷ lệ tham gia hoạt động</h6>
                     </div>
@@ -33,6 +33,12 @@
         color: #38b7fe;
     }
 
+    @@media only screen and (max-width: 600px)
+    {
+        .activities-img {
+          margin-top: -30px;
+        }
+    }
 /* Thêm flexbox styles cho section-2-flex chỉ trên màn hình lớn hơn */
 @@media (min-width: 992px) {
         .activities-img{

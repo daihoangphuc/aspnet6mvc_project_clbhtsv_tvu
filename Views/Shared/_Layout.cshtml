@@ -49,18 +49,18 @@
         <div class="container d-flex align-items-center justify-content-between">
 
             <div class="logo">
-                <h1><a href="/">
-                        <img src="\assets\img\Banner.png" style="width: 180px; height: 70px"/>
-                </a></h1>
-                <!-- Uncomment below if you prefer to use an image logo -->
-                <!-- <a href="index.html"><img src="/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+                <h1>
+                    <a href="/">
+                        <img src="\assets\img\banner-club.png" style="width: 180px; height: 70px" />
+                    </a>
+                </h1>
             </div>
 
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto active" href="/">Trang chủ</a></li>
                     <li><a class="nav-link scrollto " href="https://zalo.me/g/dqqnrd829">Nhóm hổ trợ</a></li>
-                    <li><a class="nav-link scrollto " href="https://www.youtube.com/">Hướng dẫn sử dụng</a></li>
+                    <li><a class="nav-link scrollto " href="#">Hướng dẫn sử dụng</a></li>
                
                     @if (User.Identity.IsAuthenticated)
                     {
@@ -74,7 +74,7 @@
                                 {
                                     <li><a href="/Sinhviens/UpdateProfile">Cập nhật thông tin</a></li>
                                 }
-                                <li><a href="/Chat">Chat</a></li>
+                                <li><a href="/Chat">Diễn đàn</a></li>
 
                                 @if (User.IsInRole("Administrators"))
                                 {
