@@ -29,18 +29,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY . .
 
-# Bước 6: Thiết lập biến môi trường trong runtime
-ARG DB_PASSWORD
-ARG SMTP_PASSWORD
-ARG PFX_PASSWORD
-ENV DB_PASSWORD=$DB_PASSWORD
-ENV SMTP_PASSWORD=$SMTP_PASSWORD
-ENV PFX_PASSWORD=$PFX_PASSWORD
 
-# Thay đổi nội dung của tệp appsettings.json
-RUN sed -i "s|\${secrets.DB_PASSWORD}|$DB_PASSWORD|g" appsettings.json
-RUN sed -i "s|\${secrets.SMTP_PASSWORD}|$SMTP_PASSWORD|g" appsettings.json
-RUN sed -i "s|\${secrets.PFX_PASSWORD}|$PFX_PASSWORD|g" appsettings.json
 
 RUN dotnet restore
 RUN dotnet build -c Release -o /app/build
