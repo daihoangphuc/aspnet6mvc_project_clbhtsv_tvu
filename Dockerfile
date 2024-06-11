@@ -17,9 +17,6 @@ RUN sed -i 's/TLSv1.2/TLSv1.0 TLSv1.1 TLSv1.2/g' /etc/ssl/openssl.cnf
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS certs
 WORKDIR /app
 
-# Khai báo ARG để truyền biến từ build command
-ARG PFX_PASSWORD
-
 # Sử dụng biến ARG với lệnh dotnet dev-certs
 RUN dotnet dev-certs https -ep /https/aspnetapp.pfx -p $PFX_PASSWORD
 RUN openssl pkcs12 -in /https/aspnetapp.pfx -out /https/aspnetapp.pem -nodes -password pass:$PFX_PASSWORD
@@ -29,7 +26,18 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY . .
 
+# Bước 6: Thiết lập biến môi trường trong runtime
+ARG DB_PASSWORD
+ARG SMTP_PASSWORD
+ARG PFX_PASSWORD
+ENV DB_PASSWORD=$DB_PASSWORD
+ENV SMTP_PASSWORD=$SMTP_PASSWORD
+ENV PFX_PASSWORD=$PFX_PASSWORD
 
+# Thay đổi nội dung của tệp appsettings.json
+RUN sed -i "s|\${secrets.DB_PASSWORD}|$DB_PASSWORD|g" appsettings.json
+RUN sed -i "s|\${secrets.SMTP_PASSWORD}|$SMTP_PASSWORD|g" appsettings.json
+RUN sed -i "s|\${secrets.PFX_PASSWORD}|$PFX_PASSWORD|g" appsettings.json
 
 RUN dotnet restore
 RUN dotnet build -c Release -o /app/build
