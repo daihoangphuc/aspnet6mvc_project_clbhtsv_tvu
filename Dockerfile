@@ -29,10 +29,11 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY . .
 
-# Bước 6: Thiết lập biến môi trường trong runtime
+#Khai báo các biến ARG để truyền từ secret của github trong quá trình build docker images
 ARG DB_PASSWORD
 ARG SMTP_PASSWORD
 ARG PFX_PASSWORD
+# Bước 6: Thiết lập biến môi trường trong runtime
 ENV DB_PASSWORD=$DB_PASSWORD
 ENV SMTP_PASSWORD=$SMTP_PASSWORD
 ENV PFX_PASSWORD=$PFX_PASSWORD
