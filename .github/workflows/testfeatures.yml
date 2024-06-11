@@ -29,11 +29,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build --build-arg DB_PASSWORD=$DB_PASSWORD \
-             --build-arg SMTP_PASSWORD=$SMTP_PASSWORD \
-             --build-arg PFX_PASSWORD=$PFX_PASSWORD \
+          docker build --build-arg DB_PASSWORD=${{ secrets.DB_PASSWORD }} \
+             --build-arg SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }} \
+             --build-arg PFX_PASSWORD=${{ secrets.PFX_PASSWORD }} \
              -t your_image_name .
-
       - name: Login to Docker Hub
         run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
