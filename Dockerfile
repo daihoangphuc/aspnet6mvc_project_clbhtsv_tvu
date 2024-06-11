@@ -24,11 +24,24 @@ ARG PFX_PASSWORD
 RUN dotnet dev-certs https -ep /https/aspnetapp.pfx -p $PFX_PASSWORD
 RUN openssl pkcs12 -in /https/aspnetapp.pfx -out /https/aspnetapp.pem -nodes -password pass:$PFX_PASSWORD
 
-
 # Bước 5: Cài đặt ứng dụng
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY . .
+
+# Thiết lập biến môi trường trong runtime
+ARG DB_PASSWORD
+ARG SMTP_PASSWORD
+ARG PFX_PASSWORD
+ENV DB_PASSWORD=$DB_PASSWORD
+ENV SMTP_PASSWORD=$SMTP_PASSWORD
+ENV PFX_PASSWORD=$PFX_PASSWORD
+
+# Thay đổi nội dung của tệp appsettings.json
+RUN sed -i 's/${secrets.DB_PASSWORD}/'"$DB_PASSWORD"'/g' appsettings.json
+RUN sed -i 's/${secrets.SMTP_PASSWORD}/'"$SMTP_PASSWORD"'/g' appsettings.json
+RUN sed -i 's/${secrets.PFX_PASSWORD}/'"$PFX_PASSWORD"'/g' appsettings.json
+
 RUN dotnet restore
 RUN dotnet build -c Release -o /app/build
 
@@ -41,8 +54,5 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 COPY --from=certs /https/aspnetapp.pem /https/aspnetapp.pem
-
-# Sử dụng PFX_PASSWORD như một biến môi trường runtime
-ENV PFX_PASSWORD=${PFX_PASSWORD}
 
 ENTRYPOINT ["dotnet", "website_CLB_HTSV.dll"]
