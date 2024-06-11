@@ -22,7 +22,7 @@ jobs:
         run: dotnet test 
       - name: Build Docker image 
         run: |
-          docker build -t phuchoang1910/webapp_htsv . 
+          docker build --build-arg PFX_PASSWORD=${{ secrets.PFX_PASSWORD }} -t phuchoang1910/webapp_htsv .
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }} 
           docker push phuchoang1910/webapp_htsv 
       - name: Deploy to Production 
@@ -36,7 +36,10 @@ jobs:
             docker pull phuchoang1910/webapp_htsv:latest 
             docker stop webapp_htsv || true 
             docker rm webapp_htsv || true 
-            docker run --name webapp_htsv -d -p 80:80 -p 443:443 phuchoang1910/webapp_htsv:latest 
-
+            docker run --name webapp_htsv -d -p 80:80 -p 443:443 \
+              -e "PFX_PASSWORD=${{ secrets.PFX_PASSWORD }}" \
+              -e "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" \
+              -e "SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }}" \
+              phuchoang1910/webapp_htsv:latest
 
 

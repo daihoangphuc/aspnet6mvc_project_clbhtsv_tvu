@@ -16,8 +16,8 @@ RUN sed -i 's/TLSv1.2/TLSv1.0 TLSv1.1 TLSv1.2/g' /etc/ssl/openssl.cnf
 # Bước 4: Tạo stage mới để thực thi các lệnh dotnet dev-certs
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS certs
 WORKDIR /app
-RUN dotnet dev-certs https -ep /https/aspnetapp.pfx -p Phuc123travinh
-RUN openssl pkcs12 -in /https/aspnetapp.pfx -out /https/aspnetapp.pem -nodes -password pass:Phuc123travinh
+RUN dotnet dev-certs https -ep /https/aspnetapp.pfx -p $PFX_PASSWORD
+RUN openssl pkcs12 -in /https/aspnetapp.pfx -out /https/aspnetapp.pem -nodes -password pass:$PFX_PASSWORD
 
 # Bước 5: Cài đặt ứng dụng
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
