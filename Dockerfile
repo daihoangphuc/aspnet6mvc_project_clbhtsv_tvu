@@ -16,6 +16,11 @@ RUN sed -i 's/TLSv1.2/TLSv1.0 TLSv1.1 TLSv1.2/g' /etc/ssl/openssl.cnf
 # Bước 4: Tạo stage mới để thực thi các lệnh dotnet dev-certs
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS certs
 WORKDIR /app
+
+# Khai báo ARG để truyền biến từ build command
+ARG PFX_PASSWORD
+
+# Sử dụng biến ARG với lệnh dotnet dev-certs
 RUN dotnet dev-certs https -ep /https/aspnetapp.pfx -p $PFX_PASSWORD
 RUN openssl pkcs12 -in /https/aspnetapp.pfx -out /https/aspnetapp.pem -nodes -password pass:$PFX_PASSWORD
 
@@ -23,7 +28,7 @@ RUN openssl pkcs12 -in /https/aspnetapp.pfx -out /https/aspnetapp.pem -nodes -pa
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY . .
-RUN dotnet restore 
+RUN dotnet restore
 RUN dotnet build -c Release -o /app/build
 
 # Bước 6: Publish ứng dụng
@@ -35,4 +40,8 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 COPY --from=certs /https/aspnetapp.pem /https/aspnetapp.pem
+
+# Sử dụng PFX_PASSWORD như một biến môi trường runtime
+ENV PFX_PASSWORD=${PFX_PASSWORD}
+
 ENTRYPOINT ["dotnet", "website_CLB_HTSV.dll"]
